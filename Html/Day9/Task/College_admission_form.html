@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering College</title>
+</head>
+
+<body>
+        <h2>Engineering College Admission Form</h2>
+    <form>
+
+        <label>Student Name:</label>
+        <input type="text" name="studentname" placeholder="Enter Name" required><br><br>
+        <label>Father Name:</label>
+        <input type="text" name="fathername" placeholder="Enter Father Name" required><br><br>
+        <label>Mother Name:</label>
+        <input type="text" name="mothername" placeholder="Enter Mother Name" required><br><br>
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter Email" required><br><br>
+        <label>Phone:</label>
+        <input type="tel" name="phone" minlength="10" maxlength="10" placeholder="Enter mobile Number"required><br><br>
+        <label>Date of Birth:</label>
+        <input type="date" name="dob"><br><br>
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+        <label>Department:</label><br>
+        <select name="department">
+            <option>Select Department</option>
+            <option>Civil Engineering</option>
+            <option>Coumputer Science Engineering</option>
+            <option>Chemical Engineering</option>
+            <option>Mechanical Engineering</option>
+            <option>Electrical & Electronics Engineering </option>
+        </select>
+        <br><br>
+        <label>Percentage:</label><br>
+        <input type="number" name="percentage" step="0.01" placeholder="ex:90%"required><br><br>
+        <label>Address:</label><br>
+        <textarea name="address" rows="4" cols="40" placeholder="Enter Address"required></textarea>
+        <br><br>
+        <label>Passport Size Photo:</label><br>
+        <input type="file" name="photo"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br><br>
+    <center>
+    <h2>Admission Report</h2>
+    <table border="4" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Application ID</th>
+                <th>Student Name</th>
+                <th>Department</th>
+                <th>Percentage</th>
+                <th>Email</th>
+                <th>Admission Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A1001</td>
+                <td>Tamil</td>
+                <td>Computer Science Engineering</td>
+                <td>65%</td>
+                <td>tamil@gmail.com</td>
+                <td>Not Selected</td>
+            </tr>
+            <tr>
+                <td>A1002</td>
+                <td>Bharathi</td>
+                <td>Civil Engineering</td>
+                <td>69%</td>
+                <td>bharathi@gmail.com</td>
+                <td>Selected</td>
+            </tr>
+            <tr>
+                <td>A1003</td>
+                <td>Akash</td>
+                <td>Electrical & Electronics Engineering </td>
+                <td>80%</td>
+                <td>akash@gmail.com</td>
+                <td>Selected</td>
+            </tr>
+            <tr>
+                <td>A1004</td>
+                <td>Vicky</td>
+                <td>Mechanical Engineering</td>
+                <td>70%</td>
+                <td>vingnesh@gmail.com</td>
+                <td>Waiting</td>
+            </tr>
+        </tbody>
+    </table>
+
+</center>
+</body>
+
+</html>

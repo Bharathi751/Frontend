@@ -1,0 +1,71 @@
+What is a Form?
+A Form is used to collect user data and send it to the server.
+
+Difference Between GET and POST?
+GET
+
+Data visible in URL.
+
+Less secure.
+
+POST
+
+Data hidden.
+
+More secure.
+
+What is Placeholder?
+Displays hint text inside an input field.
+
+Difference Between readonly and disabled?
+readonly
+
+Value visible.
+
+Can be submitted.
+
+Cannot edit.
+
+disabled
+
+Value visible.
+
+Cannot edit.
+
+Not submitted.
+
+Difference Between Radio and Checkbox?
+Radio
+
+Single selection.
+
+Checkbox
+
+Multiple selections.
+
+Difference Between Button and Submit?
+Button
+
+Performs custom actions.
+
+Submit
+
+Sends form data to the server.
+
+Difference Between Select and Datalist?
+Select
+
+Fixed dropdown options.
+
+Datalist
+
+User can type or choose suggestions.
+
+Difference Between Meter and Progress?
+Meter
+
+Displays a measured value.
+
+Progress
+
+Displays task completion progress.

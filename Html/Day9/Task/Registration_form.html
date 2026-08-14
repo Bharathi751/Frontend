@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <label>Name:</label>
+        <input type="text" name="Name" placeholder="enter full name" required><br><br>
+        <label>Email:</label>
+        <input type="email" name="Email" placeholder="enter email afddress" required><br><br>
+        <label>Password:</label>
+        <input type="password" name="Password" placeholder="enter password" required><br><br>
+        <label>Mobile Number:</label>
+        <input type="tel" name="Mobile Number" placeholder="Enter 10-digit number" minlength="10" maxlength="10"  required><br><br>
+        <label>DOB</label>
+        <input type="date" name="DOB" required><br><br>
+        <label>Gender:</label>
+        <input type="radio" name="Gender">
+        <label>Male</label>
+        <input type="radio" name="Gender">
+        <label>Female</label>
+        <input type="radio" name="Gender">
+        <label>Other</label><br><br>
+        <label>Skills</label>
+        <input type="checkbox" name="skills"> HTML
+        <input type="checkbox" name="skills"> CSS
+        <input type="checkbox" name="skills"> JavaScript<br><br>
+        <label>Course:</label>
+        <select name="Course">
+            <option>  Select Course</option>
+            <option>JAVA</option>
+            <option>Python</option>
+            <option>C++</option>
+            <option>C</option>
+            <option>DATA SCIENCE</option>
+        </select><br><br>
+        <label>Enter Address:</label><br>
+        <textarea name="Address"  cols="20" rows="3" placeholder="Enter Address"></textarea><br><br>
+        <label>Add Photo:</label>
+        <input type="file" name="photo"><br><br>
+        <input type="button" value="submit">
+        <input type="button" value="reset">
+    </form><br>
+     <center>
+    <h2>Student Details</h2>
+    <table border="4" cellpadding="5">
+    <thead>
+        <tr>
+            <th>SLA ID</th>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>6360</td>
+            <td>Tamil</td>
+            <td>Fullstack</td>
+            <td>tamil@gmail.com</td>
+            <td>1234567890</td>
+            <td>Paid</td>
+        </tr>
+        <tr>
+            <td>6362</td>
+            <td>Vicky</td>
+            <td>Fullstack</td>
+            <td>vingnesh@gmail.com</td>
+            <td>0987654321</td>
+            <td>Paid</td>
+        </tr>
+        <tr>
+            <td>6365</td>
+            <td>Akash</td>
+            <td>Data analytics</td>
+            <td>akash@gmail.com</td>
+            <td>2341567980</td>
+            <td>Pending</td>
+        </tr>
+
+        <tr>
+            <td>6369</td>
+            <td>Bharathi</td>
+            <td>Digital Marketing</td>
+            <td>bharathi@gmail.com</td>
+            <td>9087652413</td>
+            <td>Paid</td>
+        </tr>
+    </tbody>
+    </table>
+     </center>
+</body>
+</html>

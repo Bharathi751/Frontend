@@ -1,0 +1,47 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    body {
+        background-color: #000000;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    a{
+        text-decoration: none;
+    }
+.product-card {
+    width: 300px;
+    height: 500px;
+    padding: 20px;
+    margin: 60px;
+    background-color: white;
+    border: 6px solid;
+    border-top-color: red;
+    border-right-color: green;
+    border-bottom-color: blue;
+    border-left-color: orange;
+    text-align: center;
+}
+.product-card img {
+    width: 200px;
+    height: 200px;
+}
+.price {
+    color: green;
+    font-size: 24px;
+    font-weight: bold;
+}
+.description {
+    margin-top: 50px;
+}
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: ;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Shop</title>
+</head>
+
+<body>
+    <h2>Electronics Shop Inventory System</h2>
+
+    <form>
+
+        <label>Product ID:</label>
+        <input type="text" name="productid" placeholder=" Enter id" required><br><br>
+        <label>Product Name:</label>
+        <input type="text" name="productname" placeholder="Enter product name"><br><br>
+        <label>Brand:</label>
+        <input type="text" name="brand" placeholder="Enter brand name"><br><br>
+        <label>Category:</label>
+        <select name="category" placeholder="Enter Category">
+            <option>Select Category</option>
+            <option>Speaker</option>
+            <option>Laptop</option>
+            <option>Television</option>
+            <option>Mobile Phones</option>
+            <option>Gaming Consoles</option>
+        </select>
+        <br><br>
+        <label>Price:</label>
+        <input type="number" name="price" placeholder="Enter price" required><br><br>
+        <label>Quantity:</label>
+        <input type="number" name="quantity" placeholder="Enter quantity"required><br><br>
+        <label>Supplier:</label>
+        <input type="text" name="supplier" placeholder="Enter supplier Name" required><br><br>
+        <label>Product Image:</label>
+        <input type="file" name="productimage"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+    <center>
+        <h2>Inventory Report</h2>
+        <table border="4" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Stock Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P01</td>
+                    <td>PlayStatipon</td>
+                    <td>Sony</td>
+                    <td>₹50,000</td>
+                    <td>45</td>
+                    <td>In Stock</td>
+                </tr>
+                <tr>
+                    <td>P02</td>
+                    <td>OLED Smart TV</td>
+                    <td>LG</td>
+                    <td>₹1,09,999</td>
+                    <td>10</td>
+                    <td>In Stock</td>
+                </tr>
+                <tr>
+                    <td>P03</td>
+                    <td>IPhone 18</td>
+                    <td>Apple</td>
+                    <td>₹94,500</td>
+                    <td>200</td>
+                    <td>In Stock</td>
+                </tr>
+                <tr>
+                    <td>P04</td>
+                    <td>Laptop</td>
+                    <td>Acer</td>
+                    <td>₹69,999</td>
+                    <td>1</td>
+                    <td>Low Stock</td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+Interview Questions
+What is a Table?
+A table is used to display data in rows and columns.
+
+What is the Difference Between th and td?
+th → Table Heading
+
+td → Table Data
+What is the Purpose of thead?
+Stores column headings.
+
+What is tbody?
+Stores actual table records.
+
+What is colspan?
+Used to merge multiple columns.
+
+What is rowspan?
+Used to merge multiple rows.
+
+What is cellpadding?
+Space inside table cells.
+
+What is cellspacing?
+Space between table cells.
+
+What is a Form?
+A form is used to collect user information.
+
+Difference Between GET and POST?
+GET
+
+Data visible in URL
+
+POST
+
+Data hidden
+
+Difference Between Radio and Checkbox?
+Radio
+
+Single selection
+
+Checkbox
+
+Multiple selections
+
+Why is enctype="multipart/form-data" used?
+It is used when uploading files using the <input type="file"> element.
+
+ChatGPT Image Jul 21, 2026, 09_18_01 AM
+Click here

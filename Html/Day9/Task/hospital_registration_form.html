@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Hospital </title>
+</head>
+
+<body>
+        <h2>Apollo Hospital Patient Registration Form</h2>
+    <form>
+        <label>Patient ID:</label>
+        <input type="text" name="patient id" placeholder="Enter ID" required><br><br>
+        <label>Patient Name:</label>
+        <input type="text" name="patient name" placeholder="Enter Name"required><br><br>
+        <label>Age:</label>
+        <input type="number" name="age" placeholder="Enter age"><br><br>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+        <label>Blood Group:</label>
+        <select name="bloodgroup">
+            <option>Select Blood Group</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>A+</option>
+            <option>B+</option>
+            <option>A+</option>
+            <option>B-</option>
+        </select>
+        <br><br>
+        <label>Doctor:</label>
+        <select name="doctor">
+            <option>Select Doctor</option>
+            <option>Artho Doctor</option>
+            <option>Ent Doctor</option>
+            <option>Neurology Doctor</option>
+            <option>Dentist</option>
+        </select>
+        <br><br>
+        <label>Appointment Date:</label>
+        <input type="date" name="appointment"><br><br>
+        <label>Symptoms:</label><br>
+        <textarea name="symptoms" rows="6" cols="40" placeholder="enter Yours Symptoms" required></textarea>
+        <br><br>
+        <label>Medical Report Upload:</label><br>
+        <input type="file" name="report"><br><br>
+        <button type="submit">Submit</button>
+
+    </form>
+<br><br>
+    <center>
+        <h2>Patient Report</h2>
+    <table border="4" cellpadding="5">
+
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Blood Group</th>
+                <th>Appointment Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>PA001</td>
+                <td>Tamil</td>
+                <td>Aurtho Doctor</td>
+                <td>O+</td>
+                <td>01-08-2026</td>
+                <td>Confirmed</td>
+            </tr>
+
+            <tr>
+                <td>PA002</td>
+                <td>Vicky</td>
+                <td>Neurology Doctor</td>
+                <td>AB+</td>
+                <td>03-08-2026</td>
+                <td>Not Confirmed</td>
+            </tr>
+
+            <tr>
+                <td>PA003</td>
+                <td>Bharathi</td>
+                <td>Ent Doctor</td>
+                <td>O-</td>
+                <td>05-08-2026</td>
+                <td>Confirmed</td>
+            </tr>
+
+            <tr>
+                <td>PA005</td>
+                <td>Akash</td>
+                <td>Dentist</td>
+                <td>B+</td>
+                <td>09-08-2026</td>
+                <td>Confirmed</td>
+            </tr>
+
+        </tbody>
+    </table>
+    </center>
+</body>
+
+</html>

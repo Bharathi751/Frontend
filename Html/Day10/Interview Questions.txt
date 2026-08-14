@@ -1,0 +1,38 @@
+Interview Questions
+What is DOCTYPE?
+DOCTYPE tells the browser to use HTML5 standards while rendering the webpage.
+
+What is HTML?
+HTML stands for HyperText Markup Language and provides the structure of webpages.
+
+What is HTML5?
+HTML5 is the latest major version of HTML that supports semantic elements, multimedia, and modern web features.
+
+What is lang?
+The lang attribute specifies the language of the webpage.
+
+What is a Meta Tag?
+Meta tags provide information about the webpage for browsers, search engines, and social media platforms.
+
+What is UTF-8?
+UTF-8 (Unicode Transformation Format - 8-bit) is a character encoding standard that supports almost every language and symbol.
+
+What is Open Graph?
+Open Graph is a metadata protocol that controls how webpages appear when shared on social media.
+
+Name Important Meta Tags.
+charset
+viewport
+description
+keywords
+author
+robots
+refresh
+http-equiv
+og:title
+og:description
+og:image
+og:url
+twitter:card
+ChatGPT Image Jul 22, 2026, 08_37_43 AM
+Click here

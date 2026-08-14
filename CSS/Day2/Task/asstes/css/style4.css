@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+h1, h2 {
+    background-color: rgb(245, 184, 143);
+    text-align: center;
+    color: rgb(248, 127, 6);
+}
+.movie {
+    width: 300px;
+    height: 100px;
+    background-color: #93c4ee;
+    color: #098cff;
+    text-align: center;
+}

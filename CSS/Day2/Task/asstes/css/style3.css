@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    background-color: rgb(206, 24, 160);
+     
+}
+.department {
+   background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: rgb(8, 160, 96);
+    width: 300px;
+    height: 200px;
+}
+#cse {
+    background-color: rgb(223, 139, 13);
+}

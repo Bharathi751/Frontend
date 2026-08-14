@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{
+    text-decoration: none;
+}
+.box {
+    display: inline-block;
+    width: 120px;
+    height: 80px;
+    margin: 10px;
+    text-align: center;
+    line-height: 80px;
+    color: white;
+    font-weight: bold;
+}
+.box1 {
+    background-color: royalblue;
+}
+.box3 {
+    background-color: rgb(40, 13, 197);
+}
+.none {
+    display: none;
+    background-color: red;
+}
+.hidden {
+    visibility: hidden;
+    background-color: rgb(255, 8, 8);
+}

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+a{
+    text-decoration: none;
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 20px;
+}
+.box {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    text-align: center;
+   
+}

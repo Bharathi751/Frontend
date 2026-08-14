@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ABC Software Company</title>
+</head>
+
+<body>
+    <h2>ABC Software Company </h2>
+    <form>
+
+        <label>Employee ID:</label>
+        <input type="text" name="employeid" placeholder="Enter id" required><br><br>
+        <label>Employee Name:</label>
+        <input type="text" name="employee name" placeholder="Enter Name" required><br><br>
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter Email" required><br><br>
+        <label>Mobile:</label>
+        <input type="tel" name="mobile" minlength="10" maxlength="10" required placeholder="Enter Mobile Number"><br><br>
+        <label>Department:</label><br>
+        <select name="department">
+            <option>Select Department</option>
+            <option>Backend</option>
+            <option>Web development</option>
+            <option>Testing</option>
+            <option>Marketing</option>
+            <option>Accounting</option>
+        </select>
+        <br><br>
+        <label>Experience:</label><br>
+        <input type="number" name="experience" placeholder="ex:1"> Years
+        <br><br>
+        <label>Salary:</label><br>
+        <input type="number" name="salary" placeholder="ex:10000"><br><br>
+        <label>Skills:</label><br>
+        <input type="checkbox" name="skills" value="Java"> Java
+        <input type="checkbox" name="skills" value="UI/UX"> UI/UX
+        <input type="checkbox" name="skills" value="HTML"> HTML
+        <input type="checkbox" name="skills" value="Python"> PYTHON
+        <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+        <br><br>
+        <label>Resume Upload:</label><br>
+        <input type="file" name="resume"><br><br>
+        <input type="button" value="submit">
+        <input type="button" value="reset">
+    </form>
+    <br><br>
+    <center>
+        <h2>Employee Report</h2>
+    
+    <table border="4" cellpadding="5">
+
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Experience</th>
+                <th>Salary</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>11101</td>
+                <td>Tamil</td>
+                <td>Backend</td>
+                <td>1Years</td>
+                <td>₹40,000</td>
+                <td>Selected</td>
+            </tr>
+
+            <tr>
+                <td>11102</td>
+                <td>Vicky</td>
+                <td>Testing</td>
+                <td>4Years</td>
+                <td>₹25,000</td>
+                <td>Selected</td>
+            </tr>
+
+            <tr>
+                <td>11103</td>
+                <td>Akash</td>
+                <td>UI/UX</td>
+                <td>1Years</td>
+                <td>₹30,000</td>
+                <td>Not Selected</td>
+            </tr>
+
+            <tr>
+                <td>11104</td>
+                <td>Bharathi</td>
+                <td>Marketing</td>
+                <td>4Years</td>
+                <td>₹50,000</td>
+                <td>Selected</td>
+            </tr>
+        </tbody>
+    </table>
+    </center>
+</body>
+</html>
