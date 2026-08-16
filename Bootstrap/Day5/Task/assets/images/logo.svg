@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Outer Rounded Shield -->
+  <rect x="5" y="5" width="90" height="90" rx="24" fill="#070d1e" stroke="url(#logoGrad)" stroke-width="3" />
+  
+  <!-- Holographic City Silhouette inside Logo -->
+  <path d="M25 75V55L35 45L45 52V75H25Z" fill="#0e2a47" stroke="#38bdf8" stroke-width="1.5" />
+  <path d="M45 75V35L55 25L65 35V75H45Z" fill="#1e1b4b" stroke="#818cf8" stroke-width="2" />
+  <path d="M65 75V48L75 40V75H65Z" fill="#2e1065" stroke="#c084fc" stroke-width="1.5" />
+  
+  <!-- Glowing AI Beacon Top Point -->
+  <circle cx="55" cy="25" r="4" fill="#00f2fe" filter="url(#glow)" />
+  <circle cx="55" cy="25" r="2" fill="#ffffff" />
+  
+  <!-- Pulsing Data Stream Lines -->
+  <line x1="55" y1="25" x2="35" y2="45" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="55" y1="25" x2="75" y2="40" stroke="#c084fc" stroke-width="1" stroke-dasharray="2 2" />
+</svg>

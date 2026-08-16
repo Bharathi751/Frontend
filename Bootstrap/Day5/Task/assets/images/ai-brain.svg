@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="aiBrainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <filter id="aiGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background Disc -->
+  <circle cx="100" cy="100" r="85" fill="#070d1e" stroke="url(#aiBrainGrad)" stroke-width="2" />
+  
+  <!-- Neural Synapse Connections -->
+  <path d="M60 80 Q75 50 100 55 T140 80 T130 130 T100 145 T70 130 Z" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="4 3" opacity="0.6" />
+  
+  <!-- Brain Core Nodes -->
+  <circle cx="100" cy="55" r="6" fill="#00f2fe" filter="url(#aiGlow)" />
+  <circle cx="65" cy="85" r="5" fill="#38bdf8" />
+  <circle cx="135" cy="85" r="5" fill="#a855f7" />
+  <circle cx="75" cy="125" r="5" fill="#818cf8" />
+  <circle cx="125" cy="125" r="5" fill="#c084fc" />
+  <circle cx="100" cy="100" r="9" fill="#00f2fe" filter="url(#aiGlow)" />
+  <circle cx="100" cy="100" r="4" fill="#ffffff" />
+  <circle cx="100" cy="145" r="5" fill="#22d3ee" />
+
+  <!-- Internal Cross Links -->
+  <line x1="100" y1="55" x2="100" y2="100" stroke="#38bdf8" stroke-width="1.5" />
+  <line x1="65" y1="85" x2="100" y2="100" stroke="#38bdf8" stroke-width="1.5" />
+  <line x1="135" y1="85" x2="100" y2="100" stroke="#c084fc" stroke-width="1.5" />
+  <line x1="75" y1="125" x2="100" y2="100" stroke="#818cf8" stroke-width="1.5" />
+  <line x1="125" y1="125" x2="100" y2="100" stroke="#c084fc" stroke-width="1.5" />
+  <line x1="100" y1="145" x2="100" y2="100" stroke="#22d3ee" stroke-width="1.5" />
+</svg>

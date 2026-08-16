@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="energyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="85" fill="#070d1e" stroke="url(#energyGrad)" stroke-width="2" />
+  
+  <!-- Solar Panel Grid Base -->
+  <polygon points="50,135 150,135 165,155 35,155" fill="#064e3b" stroke="#34d399" stroke-width="1.5" />
+  <line x1="100" y1="135" x2="100" y2="155" stroke="#10b981" stroke-width="1.5" />
+  <line x1="75" y1="135" x2="65" y2="155" stroke="#10b981" stroke-width="1.5" />
+  <line x1="125" y1="135" x2="135" y2="155" stroke="#10b981" stroke-width="1.5" />
+
+  <!-- Wind Turbine Mast -->
+  <line x1="100" y1="55" x2="100" y2="135" stroke="#22d3ee" stroke-width="3" />
+  <circle cx="100" cy="55" r="6" fill="#10b981" />
+  
+  <!-- Wind Turbine Rotor Blades -->
+  <line x1="100" y1="55" x2="100" y2="20" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="100" y1="55" x2="70" y2="75" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="100" y1="55" x2="130" y2="75" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Clean Energy Eco Leaf -->
+  <path d="M140 100 C155 85 165 95 160 115 C145 115 135 105 140 100 Z" fill="#10b981" opacity="0.8" />
+  <line x1="140" y1="115" x2="155" y2="95" stroke="#a7f3d0" stroke-width="1" />
+</svg>

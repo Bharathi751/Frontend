@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <defs>
+    <linearGradient id="groundGrad" x1="300" y1="360" x2="300" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06b6d4" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="tower1Grad" x1="300" y1="80" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f2b46" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#040914" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="tower2Grad" x1="200" y1="140" x2="200" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19173d" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#060917" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="tower3Grad" x1="400" y1="120" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2a124e" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#080c1d" stop-opacity="0.95" />
+    </linearGradient>
+    <radialGradient id="beaconGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ground Cyber Grid Horizon -->
+  <ellipse cx="300" cy="400" rx="270" ry="40" fill="url(#groundGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+
+  <!-- Background Distant High-Rises -->
+  <rect x="110" y="260" width="45" height="140" rx="4" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+  <rect x="445" y="250" width="50" height="150" rx="4" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+  <rect x="70" y="300" width="35" height="100" rx="3" fill="#090e1f" stroke="#1e293b" stroke-width="1" />
+  <rect x="500" y="290" width="40" height="110" rx="3" fill="#090e1f" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Left Secondary Spire (IoT Hub) -->
+  <path d="M170 400L180 180L220 210L230 400H170Z" fill="url(#tower2Grad)" stroke="#818cf8" stroke-width="1.5" />
+  <circle cx="200" cy="190" r="5" fill="#22d3ee" />
+  <line x1="200" y1="190" x2="200" y2="400" stroke="#818cf8" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.6" />
+
+  <!-- Right Secondary Spire (Eco-Tower) -->
+  <path d="M370 400L380 170L425 140L430 400H370Z" fill="url(#tower3Grad)" stroke="#c084fc" stroke-width="1.5" />
+  <circle cx="400" cy="150" r="5" fill="#a855f7" />
+  <line x1="400" y1="150" x2="400" y2="400" stroke="#c084fc" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.6" />
+
+  <!-- Center Master Skyscraper (AI Nexus Center) -->
+  <path d="M260 400L275 120L300 70L325 120L340 400H260Z" fill="url(#tower1Grad)" stroke="#38bdf8" stroke-width="2" />
+  <line x1="300" y1="70" x2="300" y2="400" stroke="#00f2fe" stroke-width="1.5" stroke-dasharray="5 3" />
+
+  <!-- Beacon Pulse Orbs -->
+  <circle cx="300" cy="70" r="28" fill="url(#beaconGlow)" />
+  <circle cx="300" cy="70" r="7" fill="#ffffff" />
+
+  <!-- Quantum Data Beams & Network Links -->
+  <line x1="300" y1="70" x2="200" y2="190" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.8" />
+  <line x1="300" y1="70" x2="400" y2="150" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.8" />
+  <line x1="200" y1="190" x2="130" y2="280" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5" />
+  <line x1="400" y1="150" x2="470" y2="270" stroke="#a855f7" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5" />
+
+  <!-- Connected IoT Network Nodes -->
+  <circle cx="130" cy="280" r="4" fill="#38bdf8" />
+  <circle cx="470" cy="270" r="4" fill="#a855f7" />
+  <circle cx="300" cy="250" r="4" fill="#00f2fe" />
+  <circle cx="280" cy="320" r="3.5" fill="#38bdf8" />
+  <circle cx="320" cy="330" r="3.5" fill="#c084fc" />
+</svg>

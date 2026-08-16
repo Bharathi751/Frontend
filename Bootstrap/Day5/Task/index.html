@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cities of the Future | 2035 Intelligent Urban Ecosystem</title>
+    <meta name="description" content="Discover how AI, IoT, autonomous systems, and smart infrastructure are transforming cities into intelligent, sustainable ecosystems for 2035 and beyond.">
+    
+    <!-- Google Fonts: Outfit (Headings), Plus Jakarta Sans (Body), Space Grotesk (Tech Numbers) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            950: '#030712',
+                            900: '#070d1e',
+                            850: '#0c162e',
+                            800: '#111f42',
+                            700: '#1e293b',
+                        },
+                        cyan: {
+                            300: '#67e8f9',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                        mono: ['"Space Grotesk"', 'monospace'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 25s linear infinite',
+                        'float': 'float 5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS System -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-dark-950 text-slate-100 selection:bg-cyan-500 selection:text-dark-950 relative min-h-screen">
+
+    <!-- AMBIENT BACKGROUND GLOW EFFECTS -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute -top-40 -left-40 w-96 md:w-[600px] h-96 md:h-[600px] bg-cyan-500/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/3 -right-40 w-96 md:w-[700px] h-96 md:h-[700px] bg-purple-600/10 rounded-full blur-[140px]"></div>
+        <div class="absolute -bottom-20 left-1/4 w-96 md:w-[600px] h-96 md:h-[600px] bg-blue-600/10 rounded-full blur-[130px]"></div>
+        <div class="absolute inset-0 cyber-grid opacity-30"></div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. NAVBAR                                  -->
+    <!-- ========================================== -->
+    <header id="navbar" class="sticky top-0 z-50 transition-all duration-300 glass-panel border-b border-white/5 px-4 lg:px-8 py-3.5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo with SVG Icon -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.svg" alt="SmartCity 2035 Logo" class="w-10 h-10 group-hover:scale-110 transition drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]">
+                <div>
+                    <span class="text-xl font-heading font-extrabold tracking-tight text-white flex items-center gap-1.5">
+                        SmartCity <span class="text-cyan-400 text-xs font-mono px-2 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-500/30">2035</span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-dark-900/60 p-1.5 rounded-full border border-white/5">
+                <a href="#hero" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-white/5 rounded-full transition">Home</a>
+                <a href="views/technologies.html" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-white/5 rounded-full transition">AI & IoT</a>
+                <a href="views/infrastructure.html" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-white/5 rounded-full transition">Smart Infrastructure</a>
+                <a href="views/dashboard.html" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-white/5 rounded-full transition">Live Telemetry</a>
+                <a href="views/vision.html" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-white/5 rounded-full transition">Future Vision</a>
+                <a href="views/contact.html" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-white/5 rounded-full transition">Contact</a>
+            </nav>
+
+            <!-- Action Button & Mobile Hamburger -->
+            <div class="flex items-center gap-3">
+                <a href="#dashboard" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white btn-glow">
+                    <span>Explore Future</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl bg-dark-900 border border-white/10 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars-staggered text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pt-4 pb-3 border-t border-white/5 mt-3 space-y-2">
+            <a href="#hero" class="mobile-link block px-4 py-2.5 text-sm font-medium rounded-lg hover:bg-white/5 text-slate-200 hover:text-cyan-300">Home</a>
+            <a href="views/technologies.html" class="mobile-link block px-4 py-2.5 text-sm font-medium rounded-lg hover:bg-white/5 text-slate-200 hover:text-cyan-300">AI & IoT (Full Page)</a>
+            <a href="views/infrastructure.html" class="mobile-link block px-4 py-2.5 text-sm font-medium rounded-lg hover:bg-white/5 text-slate-200 hover:text-cyan-300">Smart Infrastructure (Full Page)</a>
+            <a href="views/dashboard.html" class="mobile-link block px-4 py-2.5 text-sm font-medium rounded-lg hover:bg-white/5 text-slate-200 hover:text-cyan-300">Live Telemetry (Full Page)</a>
+            <a href="views/vision.html" class="mobile-link block px-4 py-2.5 text-sm font-medium rounded-lg hover:bg-white/5 text-slate-200 hover:text-cyan-300">Future Vision (Full Page)</a>
+            <a href="views/contact.html" class="mobile-link block px-4 py-2.5 text-sm font-medium rounded-lg hover:bg-white/5 text-slate-200 hover:text-cyan-300">Contact & Civic Council (Full Page)</a>
+            <div class="pt-2">
+                <a href="#dashboard" class="mobile-link block text-center w-full py-2.5 rounded-xl font-semibold text-sm text-white btn-glow">
+                    Explore Future <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+
+        <!-- ========================================== -->
+        <!-- 2. HERO SECTION                            -->
+        <!-- ========================================== -->
+        <section id="hero" class="min-h-[88vh] flex items-center justify-center px-4 lg:px-8 py-16 md:py-24 relative">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Text & Hero Actions -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-medium tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                        <i class="fa-solid fa-microchip text-xs"></i>
+                        Next-Generation Urban Operating System
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-heading font-extrabold tracking-tight leading-[1.1]">
+                        The Cities of Tomorrow <br>
+                        <span class="text-gradient">Are Being Built Today</span>
+                    </h1>
+
+                    <p class="text-slate-400 text-base sm:text-lg md:text-xl font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Discover how Artificial Intelligence, Internet of Things, autonomous systems, and smart infrastructure are transforming cities into intelligent ecosystems.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#dashboard" class="w-full sm:w-auto px-8 py-4 rounded-full text-base font-semibold text-white btn-glow flex items-center justify-center gap-3">
+                            <span>Explore Smart Cities</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#technologies" class="w-full sm:w-auto px-8 py-4 rounded-full text-base font-medium text-slate-200 glass-button flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-network-wired text-cyan-400"></i>
+                            <span>Discover Technologies</span>
+                        </a>
+                    </div>
+
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-white/5 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl font-bold font-mono text-cyan-400">100%</div>
+                            <div class="text-xs text-slate-400">Renewable Grid</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold font-mono text-purple-400">0.4 ms</div>
+                            <div class="text-xs text-slate-400">AI Response</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold font-mono text-blue-400">Zero</div>
+                            <div class="text-xs text-slate-400">Carbon Mobility</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Futuristic City Visual with SVG Asset -->
+                <div class="lg:col-span-5 relative flex items-center justify-center">
+                    <div class="relative w-full max-w-md lg:max-w-none">
+                        
+                        <div class="relative rounded-3xl p-6 md:p-8 glass-panel border border-cyan-500/20 shadow-2xl shadow-cyan-500/10 overflow-hidden">
+                            <div class="absolute inset-0 dot-matrix opacity-40"></div>
+                            <div class="absolute -right-16 -top-16 w-48 h-48 bg-cyan-500/20 rounded-full blur-3xl"></div>
+                            <div class="absolute -left-16 -bottom-16 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl"></div>
+
+                            <!-- City Graphic Illustration from assets/images/hero-city.svg -->
+                            <div class="relative z-10 py-4 flex flex-col items-center">
+                                <div class="relative w-full h-56 flex items-center justify-center">
+                                    
+                                    <!-- Rotating Concentric Rings -->
+                                    <div class="absolute w-44 h-44 rounded-full border border-cyan-500/20 animate-spin-slow"></div>
+                                    <div class="absolute w-60 h-60 rounded-full border border-dashed border-purple-500/20 animate-spin-slow" style="animation-direction: reverse;"></div>
+                                    <div class="absolute w-32 h-32 rounded-full bg-gradient-to-tr from-cyan-500/10 to-purple-600/10 blur-xl"></div>
+                                    
+                                    <!-- SVG Vector Hero Illustration -->
+                                    <img src="assets/images/hero-city.svg" alt="Futuristic City 2035 Skyline" class="w-72 h-52 object-contain drop-shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+                                </div>
+
+                                <!-- Floating Live Status Badges -->
+                                <div class="w-full space-y-2.5 mt-4">
+                                    <div class="flex items-center justify-between px-3.5 py-2 rounded-xl bg-dark-900/80 border border-cyan-500/20 text-xs">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                            <i class="fa-solid fa-train-subway text-cyan-400"></i>
+                                            <span class="text-slate-300 font-medium">Autonomous Transit Mesh</span>
+                                        </div>
+                                        <span class="font-mono text-cyan-300 font-semibold">99.8% Sync</span>
+                                    </div>
+
+                                    <div class="flex items-center justify-between px-3.5 py-2 rounded-xl bg-dark-900/80 border border-purple-500/20 text-xs">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                                            <i class="fa-solid fa-brain text-purple-400"></i>
+                                            <span class="text-slate-300 font-medium">City AI Core Status</span>
+                                        </div>
+                                        <span class="font-mono text-purple-300 font-semibold">Active • 1.2M QPS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 3. FUTURE CITY DASHBOARD                   -->
+        <!-- ========================================== -->
+        <section id="dashboard" class="py-16 md:py-24 px-4 lg:px-8 relative border-y border-white/5 bg-dark-900/40">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-chart-line text-xs"></i>
+                        Live City Telemetry
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold tracking-tight">
+                        Future City <span class="text-gradient">Real-Time Metrics</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base">
+                        Simulated live sensor telemetry aggregated across 1.4 billion IoT municipal nodes.
+                    </p>
+                </div>
+
+                <!-- 4 Statistics Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- 98% Energy Efficiency -->
+                    <div class="glass-card rounded-2xl p-6 relative overflow-hidden group">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl group-hover:scale-110 transition">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                            </div>
+                            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-arrow-trend-up text-[10px]"></i> +12%
+                            </span>
+                        </div>
+                        <h3 class="text-sm font-medium text-slate-400 mb-1">Energy Efficiency</h3>
+                        <div class="text-4xl font-extrabold font-mono text-white mb-3">98%</div>
+                        <div class="w-full h-2 rounded-full bg-dark-800 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-1000" style="width: 98%;"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-3 flex items-center justify-between">
+                            <span>Smart Solar & Microgrids</span>
+                            <span class="text-cyan-400 font-mono font-medium">Optimal</span>
+                        </p>
+                    </div>
+
+                    <!-- 85% Traffic Reduction -->
+                    <div class="glass-card rounded-2xl p-6 relative overflow-hidden group">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-950/80 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl group-hover:scale-110 transition">
+                                <i class="fa-solid fa-traffic-light"></i>
+                            </div>
+                            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-blue-950/80 border border-blue-500/30 text-blue-300 font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-clock text-[10px]"></i> -38 min
+                            </span>
+                        </div>
+                        <h3 class="text-sm font-medium text-slate-400 mb-1">Traffic Reduction</h3>
+                        <div class="text-4xl font-extrabold font-mono text-white mb-3">85%</div>
+                        <div class="w-full h-2 rounded-full bg-dark-800 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full transition-all duration-1000" style="width: 85%;"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-3 flex items-center justify-between">
+                            <span>Autonomous Flow Sync</span>
+                            <span class="text-blue-400 font-mono font-medium">Zero Congestion</span>
+                        </p>
+                    </div>
+
+                    <!-- 92% Connected Devices -->
+                    <div class="glass-card rounded-2xl p-6 relative overflow-hidden group">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-950/80 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl group-hover:scale-110 transition">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-500/30 text-purple-300 font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-signal text-[10px]"></i> 6G Mesh
+                            </span>
+                        </div>
+                        <h3 class="text-sm font-medium text-slate-400 mb-1">Connected Devices</h3>
+                        <div class="text-4xl font-extrabold font-mono text-white mb-3">92%</div>
+                        <div class="w-full h-2 rounded-full bg-dark-800 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-purple-400 to-pink-500 rounded-full transition-all duration-1000" style="width: 92%;"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-3 flex items-center justify-between">
+                            <span>1.4B Municipal Endpoints</span>
+                            <span class="text-purple-400 font-mono font-medium">Synchronized</span>
+                        </p>
+                    </div>
+
+                    <!-- 76% Carbon Reduction -->
+                    <div class="glass-card rounded-2xl p-6 relative overflow-hidden group">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl group-hover:scale-110 transition">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-shield text-[10px]"></i> Net-Zero
+                            </span>
+                        </div>
+                        <h3 class="text-sm font-medium text-slate-400 mb-1">Carbon Reduction</h3>
+                        <div class="text-4xl font-extrabold font-mono text-white mb-3">76%</div>
+                        <div class="w-full h-2 rounded-full bg-dark-800 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full transition-all duration-1000" style="width: 76%;"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-3 flex items-center justify-between">
+                            <span>Air Quality Index</span>
+                            <span class="text-emerald-400 font-mono font-medium">99.4 AQI Pure</span>
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Telemetry Status Bar with Dynamic IDs -->
+                <div class="mt-8 p-4 rounded-xl glass-panel flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-400">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="text-slate-200 font-semibold">City Core AI: v4.8.2 Online</span>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <span>Latency: <strong id="metric-latency" class="text-cyan-300">0.38 ms</strong></span>
+                        <span>Active Sensors: <strong id="metric-nodes" class="text-cyan-300">1,489,203</strong></span>
+                        <span>Energy Harvest: <strong id="metric-energy-harvest" class="text-emerald-400">+14.8 GWh</strong></span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 4. TECHNOLOGIES POWERING SMART CITIES     -->
+        <!-- ========================================== -->
+        <section id="technologies" class="py-20 md:py-28 px-4 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-atom text-xs"></i>
+                        Next-Gen Pillars
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold tracking-tight">
+                        Technologies Powering <span class="text-gradient">Smart Cities</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base">
+                        The core technological breakthroughs transforming raw urban spaces into self-aware, responsive environments.
+                    </p>
+                </div>
+
+                <!-- 4 Technology Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- 1. AI Intelligence -->
+                    <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="text-xl font-heading font-bold text-white group-hover:text-cyan-300 transition">AI Intelligence</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Artificial Intelligence continuously analyzes petabytes of real-time municipal data to predict traffic surges, optimize municipal budgets, and make automated, life-saving decisions.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-white/5 mt-6">
+                            <button onclick="window.techModalCtrl.open('ai-intelligence')" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold inline-flex items-center gap-2 group/link">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-xs group-hover/link:translate-x-1.5 transition"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Internet of Things -->
+                    <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition">
+                                <i class="fa-solid fa-satellite-dish"></i>
+                            </div>
+                            <h3 class="text-xl font-heading font-bold text-white group-hover:text-blue-300 transition">Internet of Things</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Billions of connected micro-sensors and edge devices monitor air purity, structural integrity, water pipelines, and pedestrian flow in real time with ultra-low latency 6G mesh protocols.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-white/5 mt-6">
+                            <button onclick="window.techModalCtrl.open('iot-mesh')" class="text-blue-400 hover:text-blue-300 text-sm font-semibold inline-flex items-center gap-2 group/link">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-xs group-hover/link:translate-x-1.5 transition"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 3. Smart Transportation -->
+                    <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+                            <h3 class="text-xl font-heading font-bold text-white group-hover:text-purple-300 transition">Smart Transportation</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Autonomous electric vehicles, AI-synchronized traffic lights, and self-scheduling magnetic public transport work harmoniously to virtually eliminate accidents and commute congestion.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-white/5 mt-6">
+                            <button onclick="window.techModalCtrl.open('smart-transport')" class="text-purple-400 hover:text-purple-300 text-sm font-semibold inline-flex items-center gap-2 group/link">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-xs group-hover/link:translate-x-1.5 transition"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 4. Smart Energy -->
+                    <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition">
+                                <i class="fa-solid fa-solar-panel"></i>
+                            </div>
+                            <h3 class="text-xl font-heading font-bold text-white group-hover:text-emerald-300 transition">Smart Energy</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                100% renewable power generated through transparent solar facades, kinetic pavements, and distributed hydrogen storage grids that intelligently balance energy loads in real time.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-white/5 mt-6">
+                            <button onclick="window.techModalCtrl.open('smart-energy')" class="text-emerald-400 hover:text-emerald-300 text-sm font-semibold inline-flex items-center gap-2 group/link">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-xs group-hover/link:translate-x-1.5 transition"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 5. A DAY IN THE SMART CITY (TIMELINE)      -->
+        <!-- ========================================== -->
+        <section id="timeline" class="py-20 md:py-28 px-4 lg:px-8 relative bg-dark-900/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-clock-rotate-left text-xs"></i>
+                        24-Hour Autonomous Cycle
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold tracking-tight">
+                        A Day in the <span class="text-gradient">Smart City</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base">
+                        Experience how continuous AI orchestration and IoT connectivity optimize urban life every minute of the day.
+                    </p>
+                </div>
+
+                <!-- DESKTOP HORIZONTAL TIMELINE -->
+                <div class="hidden lg:block relative py-8">
+                    <div class="absolute top-1/2 left-4 right-4 h-1 -translate-y-1/2 timeline-glow-line rounded-full z-0 opacity-80"></div>
+                    
+                    <div class="relative z-10 grid grid-cols-5 gap-4">
+                        
+                        <!-- 06:00 AM -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="glass-card p-4 rounded-xl mb-4 w-full h-36 flex flex-col justify-center">
+                                <span class="text-xs font-mono font-bold text-cyan-400">06:00 AM</span>
+                                <h4 class="text-sm font-bold text-white mt-1">Smart Home Energy</h4>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-snug">Smart homes optimize energy usage, charging vehicles and adjusting climate.</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark-950 border-2 border-cyan-400 flex items-center justify-center text-cyan-400 text-sm shadow-[0_0_15px_rgba(6,182,212,0.6)] group-hover:scale-125 transition">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <span class="text-xs font-mono text-cyan-300 mt-3 font-semibold">Dawn Sync</span>
+                        </div>
+
+                        <!-- 08:00 AM -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="glass-card p-4 rounded-xl mb-4 w-full h-36 flex flex-col justify-center">
+                                <span class="text-xs font-mono font-bold text-blue-400">08:00 AM</span>
+                                <h4 class="text-sm font-bold text-white mt-1">AI Manages Traffic</h4>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-snug">AI signals synchronize with rush hour traffic, keeping transit smooth and stop-free.</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark-950 border-2 border-blue-400 flex items-center justify-center text-blue-400 text-sm shadow-[0_0_15px_rgba(59,130,246,0.6)] group-hover:scale-125 transition">
+                                <i class="fa-solid fa-route"></i>
+                            </div>
+                            <span class="text-xs font-mono text-blue-300 mt-3 font-semibold">Morning Commute</span>
+                        </div>
+
+                        <!-- 12:00 PM -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="glass-card p-4 rounded-xl mb-4 w-full h-36 flex flex-col justify-center">
+                                <span class="text-xs font-mono font-bold text-purple-400">12:00 PM</span>
+                                <h4 class="text-sm font-bold text-white mt-1">Building Climate</h4>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-snug">Smart buildings adjust temperature & tint glass to minimize power draw.</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark-950 border-2 border-purple-400 flex items-center justify-center text-purple-400 text-sm shadow-[0_0_15px_rgba(168,85,247,0.6)] group-hover:scale-125 transition">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <span class="text-xs font-mono text-purple-300 mt-3 font-semibold">Solar Peak</span>
+                        </div>
+
+                        <!-- 05:00 PM -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="glass-card p-4 rounded-xl mb-4 w-full h-36 flex flex-col justify-center">
+                                <span class="text-xs font-mono font-bold text-indigo-400">05:00 PM</span>
+                                <h4 class="text-sm font-bold text-white mt-1">Autonomous Transit</h4>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-snug">Autonomous public pods scale dynamically to eliminate peak congestion.</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark-950 border-2 border-indigo-400 flex items-center justify-center text-indigo-400 text-sm shadow-[0_0_15px_rgba(99,102,241,0.6)] group-hover:scale-125 transition">
+                                <i class="fa-solid fa-bus-simple"></i>
+                            </div>
+                            <span class="text-xs font-mono text-indigo-300 mt-3 font-semibold">Evening Flow</span>
+                        </div>
+
+                        <!-- 10:00 PM -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="glass-card p-4 rounded-xl mb-4 w-full h-36 flex flex-col justify-center">
+                                <span class="text-xs font-mono font-bold text-emerald-400">10:00 PM</span>
+                                <h4 class="text-sm font-bold text-white mt-1">AI City Security</h4>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-snug">AI-powered surveillance & drone nodes monitor the city, dimming empty streetlights.</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark-950 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 text-sm shadow-[0_0_15px_rgba(16,185,129,0.6)] group-hover:scale-125 transition">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span class="text-xs font-mono text-emerald-300 mt-3 font-semibold">Night Guard</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- MOBILE & TABLET VERTICAL TIMELINE -->
+                <div class="lg:hidden relative pl-6 space-y-8 before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-gradient-to-b before:from-cyan-400 before:via-purple-500 before:to-emerald-400">
+                    
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[19px] top-1.5 w-7 h-7 rounded-full bg-dark-950 border-2 border-cyan-400 flex items-center justify-center text-cyan-400 text-xs shadow-[0_0_10px_rgba(6,182,212,0.8)]">
+                            <i class="fa-solid fa-sun text-[10px]"></i>
+                        </div>
+                        <div class="glass-card p-5 rounded-xl">
+                            <span class="text-xs font-mono font-bold text-cyan-400">06:00 AM</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">Smart homes optimize energy usage</h4>
+                            <p class="text-sm text-slate-400 mt-1">Automated climate control and solar home batteries prepare for the morning routine with zero wasted power.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[19px] top-1.5 w-7 h-7 rounded-full bg-dark-950 border-2 border-blue-400 flex items-center justify-center text-blue-400 text-xs shadow-[0_0_10px_rgba(59,130,246,0.8)]">
+                            <i class="fa-solid fa-route text-[10px]"></i>
+                        </div>
+                        <div class="glass-card p-5 rounded-xl">
+                            <span class="text-xs font-mono font-bold text-blue-400">08:00 AM</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">AI manages traffic</h4>
+                            <p class="text-sm text-slate-400 mt-1">Intelligent traffic signals coordinate with autonomous vehicles in real-time, eliminating commute gridlock.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[19px] top-1.5 w-7 h-7 rounded-full bg-dark-950 border-2 border-purple-400 flex items-center justify-center text-purple-400 text-xs shadow-[0_0_10px_rgba(168,85,247,0.8)]">
+                            <i class="fa-solid fa-building text-[10px]"></i>
+                        </div>
+                        <div class="glass-card p-5 rounded-xl">
+                            <span class="text-xs font-mono font-bold text-purple-400">12:00 PM</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">Smart buildings adjust temperature</h4>
+                            <p class="text-sm text-slate-400 mt-1">Commercial spires dynamically tint smart windows and balance HVAC loads during maximum solar exposure.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[19px] top-1.5 w-7 h-7 rounded-full bg-dark-950 border-2 border-indigo-400 flex items-center justify-center text-indigo-400 text-xs shadow-[0_0_10px_rgba(99,102,241,0.8)]">
+                            <i class="fa-solid fa-bus-simple text-[10px]"></i>
+                        </div>
+                        <div class="glass-card p-5 rounded-xl">
+                            <span class="text-xs font-mono font-bold text-indigo-400">05:00 PM</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">Autonomous public transport reduces congestion</h4>
+                            <p class="text-sm text-slate-400 mt-1">Fleet sizes automatically scale along heavy demand corridors to offer frictionless transit.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[19px] top-1.5 w-7 h-7 rounded-full bg-dark-950 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 text-xs shadow-[0_0_10px_rgba(16,185,129,0.8)]">
+                            <i class="fa-solid fa-shield-halved text-[10px]"></i>
+                        </div>
+                        <div class="glass-card p-5 rounded-xl">
+                            <span class="text-xs font-mono font-bold text-emerald-400">10:00 PM</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">AI-powered security monitors the city</h4>
+                            <p class="text-sm text-slate-400 mt-1">Predictive civic defense systems, smart lighting, and ambient sensors keep the nocturnal city safe and quiet.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 6. SMART CITY FEATURES                     -->
+        <!-- ========================================== -->
+        <section id="features" class="py-20 md:py-28 px-4 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-cubes text-xs"></i>
+                        Intelligent Urban Ecosystem
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold tracking-tight">
+                        Smart City <span class="text-gradient">Key Features</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base">
+                        Eight integrated modular pillars that empower sustainable, resilient, and human-centric living.
+                    </p>
+                </div>
+
+                <!-- 8 Modern Grid Feature Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- 1. Green Energy -->
+                    <div class="glass-card rounded-2xl p-6 group">
+                        <div class="text-3xl mb-3">🌱</div>
+                        <h3 class="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition">Green Energy</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Decentralized solar glass, wind micro-turbines, and kinetic walkways feeding hydrogen battery reserves.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-cyan-400 text-xs font-mono">
+                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> 100% Zero-Carbon
+                        </div>
+                    </div>
+
+                    <!-- 2. Intelligent Traffic -->
+                    <div class="glass-card rounded-2xl p-6 group">
+                        <div class="text-3xl mb-3">🚦</div>
+                        <h3 class="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition">Intelligent Traffic</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            AI-synchronized adaptive signals, lane prioritization, and emergency vehicle auto-clearance.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-blue-400 text-xs font-mono">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Zero Congestion
+                        </div>
+                    </div>
+
+                    <!-- 3. Smart Homes -->
+                    <div class="glass-card rounded-2xl p-6 group">
+                        <div class="text-3xl mb-3">🏠</div>
+                        <h3 class="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition">Smart Homes</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Ambient intelligence, biometric personalization, predictive climate control, and localized solar storage.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-purple-400 text-xs font-mono">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> IoT Integrated
+                        </div>
+                    </div>
+
+                    <!-- 4. Smart Healthcare -->
+                    <div class="glass-card rounded-2xl p-6 group">
+                        <div class="text-3xl mb-3">🏥</div>
+                        <h3 class="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition">Smart Healthcare</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Emergency medical drones, wearable telemetry monitoring, and AI predictive epidemic response.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-emerald-400 text-xs font-mono">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> 2-Min Drone Response
+                        </div>
+                    </div>
+
+                    <!-- 5. Smart Water Management -->
+                    <div class="glass-card rounded-2xl p-6 group">
+                        <div class="text-3xl mb-3">🚰</div>
+                        <h3 class="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition">Smart Water</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Acoustic leak detection, greywater automated recycling, and real-time mineral purification monitoring.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-cyan-400 text-xs font-mono">
+                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> 99.9% Recycled
+                        </div>
+                    </div>
+
+                    <!-- 6. AI Security -->
+                    <div class="glass-card rounded-2xl p-6 group">
+                        <div class="text-3xl mb-3">🔐</div>
+                        <h3 class="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition">AI Security</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Privacy-preserving biometric encryption, automated fire defense drones, and rapid crisis response.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-purple-400 text-xs font-mono">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Quantum Encrypted
+                        </div>
+                    </div>
+
+                    <!-- 7. Smart Environment -->
+                    <div class="glass-card rounded-2xl p-6 group">
+                        <div class="text-3xl mb-3">🌳</div>
+                        <h3 class="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition">Smart Environment</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Vertical forest irrigation, automated urban cooling mist, and hyper-local atmospheric AQI sensors.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-emerald-400 text-xs font-mono">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Bio-Regenerative
+                        </div>
+                    </div>
+
+                    <!-- 8. Autonomous Transportation -->
+                    <div class="glass-card rounded-2xl p-6 group">
+                        <div class="text-3xl mb-3">🚆</div>
+                        <h3 class="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition">Autonomous Transit</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Hyper-synchronized EV pods, magnetic levitation express trains, and zero-collision routing.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-blue-400 text-xs font-mono">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> 100% Autonomous
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 7. HOW A SMART CITY WORKS (DATA FLOW)      -->
+        <!-- ========================================== -->
+        <section id="how-it-works" class="py-20 md:py-28 px-4 lg:px-8 relative bg-dark-900/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-diagram-project text-xs"></i>
+                        Data-To-Action Pipeline
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold tracking-tight">
+                        How a <span class="text-gradient">Smart City Works</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base">
+                        From physical telemetry collection to real-time civic impact in a matter of milliseconds.
+                    </p>
+                </div>
+
+                <!-- 6-Step Visual Flow Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 relative">
+                    
+                    <!-- Step 1: Sensors -->
+                    <div class="glass-card rounded-2xl p-5 text-center relative group">
+                        <div class="w-8 h-8 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-300 text-xs font-mono font-bold flex items-center justify-center mx-auto mb-3">01</div>
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-xl mx-auto mb-3 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">Sensors</h4>
+                        <p class="text-xs text-slate-400">Data gathered from IoT, cameras, LiDAR & environmental nodes.</p>
+                    </div>
+
+                    <!-- Step 2: IoT Network -->
+                    <div class="glass-card rounded-2xl p-5 text-center relative group">
+                        <div class="w-8 h-8 rounded-full bg-blue-950 border border-blue-500/40 text-blue-300 text-xs font-mono font-bold flex items-center justify-center mx-auto mb-3">02</div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mx-auto mb-3 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">IoT Network</h4>
+                        <p class="text-xs text-slate-400">High-speed, low-latency 6G mesh transmits telemetry securely.</p>
+                    </div>
+
+                    <!-- Step 3: Cloud -->
+                    <div class="glass-card rounded-2xl p-5 text-center relative group">
+                        <div class="w-8 h-8 rounded-full bg-indigo-950 border border-indigo-500/40 text-indigo-300 text-xs font-mono font-bold flex items-center justify-center mx-auto mb-3">03</div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl mx-auto mb-3 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">Cloud</h4>
+                        <p class="text-xs text-slate-400">Decentralized municipal cloud pools and aggregates streaming data.</p>
+                    </div>
+
+                    <!-- Step 4: AI Analytics -->
+                    <div class="glass-card rounded-2xl p-5 text-center relative group">
+                        <div class="w-8 h-8 rounded-full bg-purple-950 border border-purple-500/40 text-purple-300 text-xs font-mono font-bold flex items-center justify-center mx-auto mb-3">04</div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl mx-auto mb-3 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">AI Analytics</h4>
+                        <p class="text-xs text-slate-400">Neural networks spot patterns and forecast municipal demands.</p>
+                    </div>
+
+                    <!-- Step 5: Smart Decisions -->
+                    <div class="glass-card rounded-2xl p-5 text-center relative group">
+                        <div class="w-8 h-8 rounded-full bg-pink-950 border border-pink-500/40 text-pink-300 text-xs font-mono font-bold flex items-center justify-center mx-auto mb-3">05</div>
+                        <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-xl mx-auto mb-3 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">Smart Decisions</h4>
+                        <p class="text-xs text-slate-400">Instant automated actuation across grids, transit, and services.</p>
+                    </div>
+
+                    <!-- Step 6: Citizens -->
+                    <div class="glass-card rounded-2xl p-5 text-center relative group">
+                        <div class="w-8 h-8 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold flex items-center justify-center mx-auto mb-3">06</div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mx-auto mb-3 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">Citizens</h4>
+                        <p class="text-xs text-slate-400">Residents enjoy cleaner air, faster transit, and safer communities.</p>
+                    </div>
+
+                </div>
+
+                <!-- Animated Connection Arrow Banner -->
+                <div class="mt-8 p-4 rounded-xl glass-panel text-center flex items-center justify-center gap-2 md:gap-4 text-xs font-mono text-cyan-300 overflow-x-auto whitespace-nowrap">
+                    <span>Sensors</span>
+                    <i class="fa-solid fa-arrow-right text-slate-500"></i>
+                    <span>IoT Network</span>
+                    <i class="fa-solid fa-arrow-right text-slate-500"></i>
+                    <span>Cloud</span>
+                    <i class="fa-solid fa-arrow-right text-slate-500"></i>
+                    <span>AI Analytics</span>
+                    <i class="fa-solid fa-arrow-right text-slate-500"></i>
+                    <span>Smart Decisions</span>
+                    <i class="fa-solid fa-arrow-right text-slate-500"></i>
+                    <span class="text-emerald-400 font-bold">Citizens</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 8. FUTURE VISION SECTION                   -->
+        <!-- ========================================== -->
+        <section id="vision" class="py-20 md:py-32 px-4 lg:px-8 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto relative z-10">
+                
+                <div class="rounded-3xl glass-panel p-8 md:p-14 lg:p-16 border border-cyan-500/30 relative overflow-hidden shadow-2xl">
+                    <div class="absolute -top-24 -right-24 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl"></div>
+                    
+                    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+                        
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-300 text-xs font-semibold tracking-wider uppercase">
+                            <i class="fa-solid fa-eye text-xs"></i>
+                            2035 Horizon
+                        </div>
+
+                        <h2 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight">
+                            Imagine a City <span class="text-gradient">That Thinks.</span>
+                        </h2>
+
+                        <p class="text-slate-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                            The city of 2035 is not merely steel, concrete, and glass. It is a living, breathing synthetic organism designed to serve, protect, and empower human potential.
+                        </p>
+
+                        <!-- 5 Vision Pillars -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 pt-6 text-left">
+                            
+                            <!-- 1. More Sustainable -->
+                            <div class="p-4 rounded-xl bg-dark-900/80 border border-cyan-500/20">
+                                <div class="text-cyan-400 text-xl mb-2"><i class="fa-solid fa-seedling"></i></div>
+                                <h4 class="text-sm font-bold text-white">More Sustainable</h4>
+                                <p class="text-xs text-slate-400 mt-1">Zero waste, 100% circular resources & clean energy.</p>
+                            </div>
+
+                            <!-- 2. Safer -->
+                            <div class="p-4 rounded-xl bg-dark-900/80 border border-blue-500/20">
+                                <div class="text-blue-400 text-xl mb-2"><i class="fa-solid fa-shield-cat"></i></div>
+                                <h4 class="text-sm font-bold text-white">Safer</h4>
+                                <p class="text-xs text-slate-400 mt-1">Predictive disaster prevention & instant medical response.</p>
+                            </div>
+
+                            <!-- 3. Faster -->
+                            <div class="p-4 rounded-xl bg-dark-900/80 border border-purple-500/20">
+                                <div class="text-purple-400 text-xl mb-2"><i class="fa-solid fa-bolt"></i></div>
+                                <h4 class="text-sm font-bold text-white">Faster</h4>
+                                <p class="text-xs text-slate-400 mt-1">Zero wait-time transit & effortless civic digital services.</p>
+                            </div>
+
+                            <!-- 4. Energy Efficient -->
+                            <div class="p-4 rounded-xl bg-dark-900/80 border border-indigo-500/20">
+                                <div class="text-indigo-400 text-xl mb-2"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                                <h4 class="text-sm font-bold text-white">Energy Efficient</h4>
+                                <p class="text-xs text-slate-400 mt-1">Self-generating buildings & predictive power grids.</p>
+                            </div>
+
+                            <!-- 5. Citizen Focused -->
+                            <div class="p-4 rounded-xl bg-dark-900/80 border border-emerald-500/20 sm:col-span-2 md:col-span-1">
+                                <div class="text-emerald-400 text-xl mb-2"><i class="fa-solid fa-heart-pulse"></i></div>
+                                <h4 class="text-sm font-bold text-white">Citizen Focused</h4>
+                                <p class="text-xs text-slate-400 mt-1">Human happiness, clean air & vibrant green public spaces.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 9. CALL TO ACTION (CTA)                    -->
+        <!-- ========================================== -->
+        <section id="contact" class="py-20 md:py-28 px-4 lg:px-8 relative bg-gradient-to-b from-dark-950 to-dark-900">
+            <div class="max-w-5xl mx-auto text-center space-y-8">
+                
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
+                    <i class="fa-solid fa-rocket text-xs"></i>
+                    Join the Movement
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight">
+                    Are You Ready for the <br>
+                    <span class="text-gradient">Smart City Revolution?</span>
+                </h2>
+
+                <p class="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    Technology is not just changing our cities. It is redefining how we live. Step forward into the intelligent era.
+                </p>
+
+                <!-- Interactive Newsletter Form -->
+                <div class="max-w-md mx-auto pt-4">
+                    <form id="newsletter-form" class="relative flex flex-col sm:flex-row gap-3">
+                        <div class="relative flex-1">
+                            <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                            <input type="email" required placeholder="Enter your email for 2035 updates..." class="w-full pl-11 pr-4 py-3.5 rounded-full bg-dark-900/90 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition">
+                        </div>
+                        <button type="submit" class="px-7 py-3.5 rounded-full text-sm font-semibold text-white btn-glow whitespace-nowrap">
+                            Explore the Future
+                        </button>
+                    </form>
+                    <p id="sub-success" class="hidden text-xs text-emerald-400 font-mono mt-3">
+                        <i class="fa-solid fa-circle-check"></i> Connected to SmartCity 2035 Network Dispatch!
+                    </p>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-mono">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-cyan-400"></i> Open City Standard</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-cyan-400"></i> Quantum Encrypted</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-cyan-400"></i> Carbon Negative by Design</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- 10. FOOTER                                 -->
+    <!-- ========================================== -->
+    <footer class="glass-panel border-t border-white/5 pt-16 pb-12 px-4 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+            
+            <!-- Brand Column -->
+            <div class="lg:col-span-2 space-y-4">
+                <a href="#hero" class="flex items-center gap-3">
+                    <img src="assets/images/logo.svg" alt="SmartCity 2035 Logo" class="w-9 h-9">
+                    <span class="text-xl font-heading font-extrabold tracking-tight text-white">
+                        SmartCity <span class="text-cyan-400 text-sm font-mono px-2 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-500/30">2035</span>
+                    </span>
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                    Pioneering autonomous urban orchestration, clean energy microgrids, and citizen-centered AI systems for the next century.
+                </p>
+                <div class="flex items-center space-x-3 pt-2">
+                    <a href="#" class="w-9 h-9 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links: Navigation -->
+            <div class="space-y-3">
+                <h4 class="text-sm font-heading font-bold text-white tracking-wider uppercase">Navigation</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="#hero" class="hover:text-cyan-300 transition">Home</a></li>
+                    <li><a href="views/technologies.html" class="hover:text-cyan-300 transition">AI & IoT</a></li>
+                    <li><a href="views/infrastructure.html" class="hover:text-cyan-300 transition">Smart Infrastructure</a></li>
+                    <li><a href="views/dashboard.html" class="hover:text-cyan-300 transition">Live Telemetry</a></li>
+                    <li><a href="views/vision.html" class="hover:text-cyan-300 transition">Future Vision</a></li>
+                    <li><a href="views/contact.html" class="hover:text-cyan-300 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links: Technologies -->
+            <div class="space-y-3">
+                <h4 class="text-sm font-heading font-bold text-white tracking-wider uppercase">Technologies</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="views/technologies.html" class="hover:text-cyan-300 transition">AI Intelligence Core</a></li>
+                    <li><a href="views/technologies.html" class="hover:text-cyan-300 transition">6G IoT Sensor Mesh</a></li>
+                    <li><a href="views/technologies.html" class="hover:text-cyan-300 transition">Autonomous Transit</a></li>
+                    <li><a href="views/technologies.html" class="hover:text-cyan-300 transition">Renewable Smart Grids</a></li>
+                    <li><a href="#how-it-works" class="hover:text-cyan-300 transition">Data Pipeline</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links: Project Info -->
+            <div class="space-y-3">
+                <h4 class="text-sm font-heading font-bold text-white tracking-wider uppercase">Project Info</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="views/vision.html" class="hover:text-cyan-300 transition">About 2035 Vision</a></li>
+                    <li><a href="views/dashboard.html" class="hover:text-cyan-300 transition">Live Dashboard</a></li>
+                    <li><a href="#timeline" class="hover:text-cyan-300 transition">24h City Schedule</a></li>
+                    <li><a href="views/contact.html" class="hover:text-cyan-300 transition">Civic Council</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
+            <div>
+                © 2035 SmartCity. Building a smarter tomorrow.
+            </div>
+            <div class="flex items-center gap-2 text-slate-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>System Status: All 1,489,203 City Nodes Active</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE TECHNOLOGY MODAL -->
+    <div id="tech-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="glass-panel max-w-lg w-full rounded-2xl p-6 md:p-8 border border-cyan-500/30 shadow-2xl relative">
+            <button onclick="window.techModalCtrl.close()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-lg bg-dark-900 border border-white/10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-4">
+                <i class="fa-solid fa-microchip"></i> System Architecture Spec
+            </div>
+            <h3 id="modal-title" class="text-2xl font-heading font-bold text-white mb-3">Technology Spec</h3>
+            <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed mb-4">Detailed specifications will appear here.</p>
+            
+            <!-- Dynamic Specs Grid Container -->
+            <div id="modal-specs-container" class="grid grid-cols-3 gap-2 mb-6 hidden"></div>
+
+            <div class="flex items-center justify-end gap-3 pt-4 border-t border-white/10">
+                <button onclick="window.techModalCtrl.close()" class="px-5 py-2.5 rounded-full text-xs font-semibold text-white btn-glow">Close Details</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MVC SCRIPT BINDINGS & CONTROLLERS -->
+    <script src="models/CityDataModel.js"></script>
+    <script src="models/TechnologyModel.js"></script>
+    <script src="models/FeatureModel.js"></script>
+    <script src="models/TimelineModel.js"></script>
+    <script src="controllers/AppController.js"></script>
+    <script src="controllers/DashboardController.js"></script>
+    <script src="controllers/TechModalController.js"></script>
+    <script src="controllers/ContactController.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Instantiate MVC Controllers
+            window.appCtrl = new AppController();
+            window.cityModel = new CityDataModel();
+            window.techModel = new TechnologyModel();
+            window.dashCtrl = new DashboardController(window.cityModel);
+            window.techModalCtrl = new TechModalController(window.techModel);
+            window.contactCtrl = new ContactController(window.appCtrl);
+        });
+    </script>
+</body>
+</html>
