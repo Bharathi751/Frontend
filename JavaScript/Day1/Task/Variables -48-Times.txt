@@ -1,0 +1,169 @@
+JAVA SCRIPT VARIABLE 
+
+var , let , const
+
+var Variables:
+
+var house
+var name
+var email
+var phone
+var cell
+var container
+var declaration
+var form
+var value
+var heading
+var paragraph
+var header
+var footer 
+var main
+var nav
+var section
+var article
+var date 
+var time
+var card
+var marginBottom
+var alignIteam
+var flexGrid
+var textbox
+var boxButton
+var radioButton
+var value
+var solid
+var datatype
+var alignment
+var city
+var console
+var variable
+var element
+var box
+var note
+var bar
+var coloumn
+var table
+var row
+var animal
+var button
+var garadient
+var array
+var texture
+var scope
+var future
+var dot
+var condition
+var grid
+
+const Variables:
+
+const address
+const value
+const table
+const row
+const advertise
+const roaster
+const banner
+const icon
+const position
+const tech
+const group
+const live
+const linear
+const data
+const input
+const output
+const subheading
+const total 
+const form
+const city
+const margin
+const top
+const bottom
+const left
+const right
+const element
+const key
+const volume
+const frequency
+const engine
+const memory
+const text
+const color
+const meta
+const view
+const dash
+const fill
+const main
+const sub
+const tag
+const true
+const false
+const grid
+const flex
+const corner
+const embedded
+const link
+const style
+const sheet
+const source
+
+let Variables:
+
+let file
+let open
+let close
+let type
+let insert
+let method
+let standing
+let operator
+let option
+let method
+let dot
+let hover
+let display
+let note
+let space
+let keyWords
+let machine
+let college
+let upButton
+let downButton
+let padding
+let margin
+let date
+let vertical
+let horizondal
+let circle
+let square
+let rectangle
+let objects
+let hole
+let plug
+let upward
+let downward
+let fullClose
+let closeOne
+let halfOne
+let Behalf
+let squareroot
+let imageValue
+let idValue
+let numberValue
+let valueObject
+let typeElement
+let typeBox
+let textArea
+let textSpace
+let textBackground
+let textAlign
+let backgroundColour
+let borderBox
+
+
+
+  
+
+
+

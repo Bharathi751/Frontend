@@ -1,0 +1,77 @@
+1. What is javascript ?
+JavaScript (JS) is a lightweight, interpreted programming language used to make web pages interactive and dynamic. Alongside HTML (which structures content) and CSS (which designs the layout), JavaScript is one of the three core technologies powering the World Wide Web.
+
+Core Technical Characteristics:
+Interpreted / JIT Compiled: Browsers execute JavaScript code directly on the fly. Modern engines like V8 use Just-In-Time (JIT) compilation to run code lightning-fast.Client-Side Execution: It primarily runs directly in the user’s web browser. This reduces server load and allows instant feedback.Dynamically Typed: Variable data types are determined automatically at runtime rather than declared manually ahead of time.Event-Driven: It actively listens for user actions—like a mouse click, keypress, or screen scroll—and triggers specific code responses
+
+2. What is a variable ?
+A variable in JavaScript is a named container used to store data values that your program can manipulate. Think of it as a labeled storage box; the label is the variable's name, and the item inside is the data.Because JavaScript is dynamically typed, you do not need to specify what kind of data (like text or numbers) a variable will hold when you create it.
+
+The Three Ways to Declare a Variable:
+Modern JavaScript uses three distinct keywords to create variables, each controlling how the variable behaves:
+let: Declares a block-scoped variable that can be changed or reassigned later.
+const: Declares a block-scoped variable that cannot be changed (it is a constant).
+var: The oldest keyword; it is largely outdated because it has looser scoping rules (var is function-scoped).
+
+3. What is variable declaration ?
+Variable declaration in JavaScript is the process of creating and naming a variable so the computer knows it exists and allocates memory for it. It acts as a labeled container used to store data values that your code can read or modify later.
+You can declare a variable in JavaScript using three different keywords: let, const, or var.
+A basic variable declaration consists of a keyword and a unique name (called an identifier):
+Declaration: Naming the variable (let totalAmount).
+
+4. What is initialization ?
+In JavaScript, initialization is the process of assigning an initial value to a variable or object when it is created. It sets up the data container so it is ready for use in your program.
+Variable Lifecycle: Declaration vs. Initialization
+To understand initialization, it helps to see the two-step lifecycle of a variable:
+Declaration: The JavaScript engine is notified that a named container exists.
+Initialization: A concrete value is stored inside that container.
+
+You can initialize variables in two main ways:
+
+1. Combined Declaration and Initialization:
+This is the most common approach. You create the variable and give it a value on the exact same line
+let score = 100;        // Declared and initialized to 100
+const apiKey = "xyz123"; // Must be initialized immediately
+
+2. Separate Declaration and Initialization:
+You can declare a container first and populate it with data later:
+let total;       // Declaration (automatically defaults to 'undefined')
+total = 50.5;    // Initialization occurs here
+
+5. What is an assignment operator ?
+An assignment operator in JavaScript is used to assign a value to a variable or an object property. The most fundamental assignment operator is the single equal sign (=), which takes the value from the right side and stores it in the variable on the left side.JavaScript also features compound assignment operators, which combine a standard operation (like math or logic) with an assignment in a single, clean shorthand step.
+
+6. What are var, let and const ?
+In JavaScript, var, let, and const are keywords used to declare variables, but they differ significantly in scope, reassignment rules, and hoisting behavior.
+
+7. What is the difference between var, let and const ?
+The primary differences between var, let, and const in JavaScript revolve around scope, reassignment, and hoisting:
+
+1. Scope (Where the variable lives):
+var is function-scoped: If you declare it inside a function, it belongs to that function. If you declare it inside a block (like an if statement or a for loop), it leaks out and can be accessed outside that block.
+let & const are block-scoped: They only exist inside the immediate curly braces { } where they are defined.
+
+2. Reassignment and Redeclaration:
+var: You can freely update the value and even redeclare the same variable name in the same scope without errors. This often leads to accidental bugs.
+let: You can update (reassign) the value, but you cannot redeclare it in the same scope.
+const: Short for constant. You cannot reassign the value, and you cannot redeclare it. Note: If a const holds an object or an array, you can still mutate its internal contents (like adding an item to the array), but you cannot assign a brand-new object to it.
+
+3. Hoisting and the Temporal Dead Zone (TDZ):
+var is hoisted and initialized as undefined. You can access it before its line of code runs without crashing your app.
+let and const are hoisted but not initialized. They sit in a "Temporal Dead Zone" (TDZ) from the start of the block until the code reaches the line where they are declared. Accessing them early crashes the program with a ReferenceError.
+
+8. What is ES6 ?
+ES6 stands for ECMAScript 6, which is the sixth major edition of the ECMAScript language specification standard that defines how JavaScript works. Released in 2015 (and officially named ECMAScript 2015), it is widely considered the most significant update to JavaScript since its creation.
+ES6 modernized JavaScript by introducing cleaner syntax, fixing scoping issues, adding built-in support for object-oriented programming, and simplifying how asynchronous operations are handled. Today, ES6 features are the standard industry practice for modern web development frameworks like React, Vue, and Angular.
+
+9. What is a JavaScript Engine ?
+A JavaScript engine is a specialized computer program that parses, interprets, and executes JavaScript code by translating it into low-level machine instructions that a computer's processor can directly understand. Essentially, it acts as the intermediary interpreter between human-readable code and machine hardware.A JavaScript engine is a specialized computer program that parses, interprets, and executes JavaScript code by translating it into low-level machine instructions that a computer's processor can directly understand. Essentially, it acts as the intermediary interpreter between human-readable code and machine hardware.
+
+10. What is V8 ?
+V8 is Google's open-source, high-performance JavaScript and WebAssembly engine written in C++. It is the core software component that reads, compiles, and executes JavaScript code.
+Instead of using a traditional interpreter to read code line-by-line, V8 uses Just-In-Time (JIT) compilation to translate JavaScript directly into native machine code at runtime so your computer's processor can execute it immediately.
+
+
+
+
+
