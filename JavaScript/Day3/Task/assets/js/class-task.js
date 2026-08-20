@@ -1,45 +1,45 @@
-let name="Vicky"
-name="BHarathi"
+let name="Vicky";
+name="BHarathi";
 console.log(name);
 
-let officeName="TCS"
-officeName="HCL"
+let officeName="TCS";
+officeName="HCL";
 console.log(officeName);
 
-let shoppingMall="SaravanaStore"
-shoppingMall="ChennaiSilks"
+let shoppingMall="SaravanaStore";
+shoppingMall="ChennaiSilks";
 console.log(shoppingMall);
 
-let place="kerala"
-place="munnar"
+let place="kerala";
+place="munnar";
 console.log(place);
 
-let food="Biriyani"
-food="FriedRice"
+let food="Biriyani";
+food="FriedRice";
 console.log(food);
 
-let brand="puma"
-brand="nike"
+let brand="puma";
+brand="nike";
 console.log(brand);
 
-let paint="white"
-paint="black"
+let paint="white";
+paint="black";
 console.log(paint);
 
-let color="gradient"
-color="silavet"
+let color="gradient";
+color="silavet";
 console.log(color);
 
-let odd=3
-odd=5
+let odd=3;
+odd=5;
 console.log(odd);
 
-let even=4
-even=8
+let even=4;
+even=8;
 console.log(even);
 
-let discount=50%
-discount=80%
+let discount="50%";
+discount="25%";
 console.log(discount);
 
 let state="TamilNadu"
