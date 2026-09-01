@@ -1,0 +1,21 @@
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Syntax Highlight Styles */
+.token-keyword { color: #f43f5e; font-weight: 500; }
+.token-var { color: #60a5fa; }
+.token-string { color: #34d399; }
+.token-number { color: #fbbf24; }
+.token-operator { color: #cbd5e1; }
+.token-func { color: #a78bfa; }
+
+/* Jump Navigation Pill */
+.jump-pill {
+    transition: all 0.15s ease-in-out;
+}
+.jump-pill:hover {
+    transform: translateY(-1px);
+}

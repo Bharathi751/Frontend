@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Logical Practice – 10 Beginner Programs</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'Consolas', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* Syntax Highlight Styles */
+        .token-keyword { color: #f43f5e; font-weight: 500; }
+        .token-var { color: #60a5fa; }
+        .token-string { color: #34d399; }
+        .token-number { color: #fbbf24; }
+        .token-operator { color: #cbd5e1; }
+        .token-func { color: #a78bfa; }
+
+        /* Jump Navigation Pill Effect */
+        .jump-pill {
+            transition: all 0.15s ease-in-out;
+        }
+        .jump-pill:hover {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- 1. Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-2 font-bold text-slate-900 text-lg tracking-tight hover:text-blue-600 transition-colors">
+                <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-mono text-sm font-semibold">JS</span>
+                <span>JavaScript Practice</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-600">
+                <a href="#home" class="hover:text-blue-600 transition-colors">Home</a>
+                <a href="#programs" class="hover:text-blue-600 transition-colors">Programs</a>
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="sm:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" aria-label="Toggle navigation">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden sm:hidden border-t border-slate-100 bg-white px-4 py-3 space-y-2 text-sm font-medium text-slate-600">
+            <a href="#home" class="block py-1 hover:text-blue-600">Home</a>
+            <a href="#programs" class="block py-1 hover:text-blue-600">Programs</a>
+            <a href="#about" class="block py-1 hover:text-blue-600">About</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 py-10 space-y-16">
+
+        <!-- 2. Hero Section -->
+        <section id="home" class="text-center py-6 sm:py-10 border-b border-slate-200">
+            <span class="inline-block px-3 py-1 text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-100 rounded-full mb-3">
+                Beginner Series • JavaScript Logic
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-2">
+                JavaScript Logical Practice
+            </h1>
+            <h2 class="text-lg sm:text-xl font-medium text-slate-600 mb-4">
+                10 Easy Programs for Beginners
+            </h2>
+            <p class="text-slate-500 max-w-xl mx-auto text-sm sm:text-base leading-relaxed mb-6">
+                Practice basic JavaScript logic using conditions, loops, operators, and arrays.
+            </p>
+            <div>
+                <a href="#programs" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Start Practicing
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Programs Section -->
+        <section id="programs" class="space-y-8">
+            <!-- Section Header -->
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">10 Beginner Logical Programs</h2>
+                <p class="text-slate-500 text-sm sm:text-base mt-1">
+                    Try to understand the logic behind each program and compare your solution with the answer.
+                </p>
+
+                <!-- Program Quick-Jump Navigation -->
+                <div class="mt-5 pt-4 border-t border-slate-100">
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2.5">Jump to Program:</span>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#p1" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">1</a>
+                        <a href="#p2" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">2</a>
+                        <a href="#p3" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">3</a>
+                        <a href="#p4" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">4</a>
+                        <a href="#p5" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">5</a>
+                        <a href="#p6" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">6</a>
+                        <a href="#p7" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">7</a>
+                        <a href="#p8" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">8</a>
+                        <a href="#p9" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">9</a>
+                        <a href="#p10" class="jump-pill w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600">10</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List of 10 Programs -->
+            <div class="space-y-8">
+
+                <!-- Program 01 -->
+                <article id="p1" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">01 — Positive or Negative</h3>
+                        <span class="text-xs font-mono text-slate-500">Conditionals</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Check whether a number is positive or negative.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-01.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> number1 <span class="token-operator">=</span> <span class="token-number">-5</span>;
+
+<span class="token-keyword">if</span> (number1 <span class="token-operator">&gt;=</span> <span class="token-number">0</span>) {
+    <span class="token-func">console.log</span>(<span class="token-string">"Positive"</span>);
+} <span class="token-keyword">else</span> {
+    <span class="token-func">console.log</span>(<span class="token-string">"Negative"</span>);
+}</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800">
+Negative
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Program 02 -->
+                <article id="p2" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">02 — Even or Odd</h3>
+                        <span class="text-xs font-mono text-slate-500">Modulus Operator</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Check whether a number is even or odd.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-02.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> number2 <span class="token-operator">=</span> <span class="token-number">8</span>;
+
+<span class="token-keyword">if</span> (number2 <span class="token-operator">%</span> <span class="token-number">2</span> <span class="token-operator">===</span> <span class="token-number">0</span>) {
+    <span class="token-func">console.log</span>(<span class="token-string">"Even"</span>);
+} <span class="token-keyword">else</span> {
+    <span class="token-func">console.log</span>(<span class="token-string">"Odd"</span>);
+}</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800">
+Even
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Program 03 -->
+                <article id="p3" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">03 — Greater Number</h3>
+                        <span class="text-xs font-mono text-slate-500">Comparison</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Find the greater of two numbers.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-03.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> a <span class="token-operator">=</span> <span class="token-number">10</span>;
+<span class="token-keyword">let</span> b <span class="token-operator">=</span> <span class="token-number">20</span>;
+
+<span class="token-keyword">if</span> (a <span class="token-operator">&gt;</span> b) {
+    <span class="token-func">console.log</span>(a);
+} <span class="token-keyword">else</span> {
+    <span class="token-func">console.log</span>(b);
+}</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800">
+20
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Program 04 -->
+                <article id="p4" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">04 — Voting Eligibility</h3>
+                        <span class="text-xs font-mono text-slate-500">Conditionals</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Check whether a person is eligible to vote.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-04.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> age <span class="token-operator">=</span> <span class="token-number">20</span>;
+
+<span class="token-keyword">if</span> (age <span class="token-operator">&gt;=</span> <span class="token-number">18</span>) {
+    <span class="token-func">console.log</span>(<span class="token-string">"Eligible to vote"</span>);
+} <span class="token-keyword">else</span> {
+    <span class="token-func">console.log</span>(<span class="token-string">"Not eligible to vote"</span>);
+}</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800">
+Eligible to vote
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Program 05 -->
+                <article id="p5" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">05 — Pass or Fail</h3>
+                        <span class="text-xs font-mono text-slate-500">Conditionals</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Check whether a student has passed or failed.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-05.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> mark <span class="token-operator">=</span> <span class="token-number">75</span>;
+
+<span class="token-keyword">if</span> (mark <span class="token-operator">&gt;=</span> <span class="token-number">40</span>) {
+    <span class="token-func">console.log</span>(<span class="token-string">"Pass"</span>);
+} <span class="token-keyword">else</span> {
+    <span class="token-func">console.log</span>(<span class="token-string">"Fail"</span>);
+}</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800">
+Pass
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Program 06 -->
+                <article id="p6" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">06 — Adult or Minor</h3>
+                        <span class="text-xs font-mono text-slate-500">Conditionals</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Check whether a person is an adult or a minor.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-06.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> age <span class="token-operator">=</span> <span class="token-number">16</span>;
+
+<span class="token-keyword">if</span> (age <span class="token-operator">&gt;=</span> <span class="token-number">18</span>) {
+    <span class="token-func">console.log</span>(<span class="token-string">"Adult"</span>);
+} <span class="token-keyword">else</span> {
+    <span class="token-func">console.log</span>(<span class="token-string">"Minor"</span>);
+}</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800">
+Minor
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Program 07 -->
+                <article id="p7" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">07 — Print Numbers 1 to 10</h3>
+                        <span class="text-xs font-mono text-slate-500">For Loop</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Print numbers from 1 to 10 using a for loop.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-07.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">for</span> (<span class="token-keyword">let</span> i <span class="token-operator">=</span> <span class="token-number">1</span>; i <span class="token-operator">&lt;=</span> <span class="token-number">10</span>; i<span class="token-operator">++</span>) {
+    <span class="token-func">console.log</span>(i);
+}</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800 whitespace-pre">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</div>
+                    </div>
+                </article>
+
+                <!-- Program 08 -->
+                <article id="p8" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">08 — Sum of Numbers 1 to 10</h3>
+                        <span class="text-xs font-mono text-slate-500">Loop & Accumulator</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Find the sum of numbers from 1 to 10.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-08.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> sum <span class="token-operator">=</span> <span class="token-number">0</span>;
+
+<span class="token-keyword">for</span> (<span class="token-keyword">let</span> i <span class="token-operator">=</span> <span class="token-number">1</span>; i <span class="token-operator">&lt;=</span> <span class="token-number">10</span>; i<span class="token-operator">++</span>) {
+    sum <span class="token-operator">=</span> sum <span class="token-operator">+</span> i;
+}
+
+<span class="token-func">console.log</span>(sum);</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800">
+55
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Program 09 -->
+                <article id="p9" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">09 — Multiplication Table</h3>
+                        <span class="text-xs font-mono text-slate-500">Loop & Formatting</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Print the multiplication table of 5.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-09.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> number <span class="token-operator">=</span> <span class="token-number">5</span>;
+
+<span class="token-keyword">for</span> (<span class="token-keyword">let</span> i <span class="token-operator">=</span> <span class="token-number">1</span>; i <span class="token-operator">&lt;=</span> <span class="token-number">10</span>; i<span class="token-operator">++</span>) {
+    <span class="token-func">console.log</span>(number <span class="token-operator">+</span> <span class="token-string">" x "</span> <span class="token-operator">+</span> i <span class="token-operator">+</span> <span class="token-string">" = "</span> <span class="token-operator">+</span> (number <span class="token-operator">*</span> i));
+}</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800 whitespace-pre">5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50</div>
+                    </div>
+                </article>
+
+                <!-- Program 10 -->
+                <article id="p10" class="bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-sm scroll-mt-20">
+                    <div class="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-slate-900">10 — Count Array Values</h3>
+                        <span class="text-xs font-mono text-slate-500">Arrays</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Question:</span>
+                        <p class="text-sm sm:text-base text-slate-700 mt-0.5">Find how many values are present in an array.</p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden border border-slate-800 bg-[#0f172a] text-slate-200 mb-4">
+                        <div class="flex items-center justify-between px-4 py-2 bg-[#1e293b] border-b border-slate-800 text-xs font-mono">
+                            <span class="text-slate-400">program-10.js</span>
+                            <button class="copy-btn text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <span>Copy Code</span>
+                            </button>
+                        </div>
+                        <pre class="p-4 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code><span class="token-keyword">let</span> fruits <span class="token-operator">=</span> [<span class="token-string">"Apple"</span>, <span class="token-string">"Banana"</span>, <span class="token-string">"Mango"</span>, <span class="token-string">"Orange"</span>];
+
+<span class="token-func">console.log</span>(fruits.length);</code></pre>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Output:</span>
+                        <div class="mt-1 p-3 bg-slate-100 border border-slate-200 rounded-md font-mono text-xs sm:text-sm text-slate-800">
+4
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 4. About Section -->
+        <section id="about" class="bg-white border border-slate-200 rounded-lg p-6 sm:p-8 scroll-mt-20">
+            <h2 class="text-xl font-bold text-slate-900 mb-2">About This Page</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                This page is created for beginners who are learning JavaScript. These simple programs help practice conditions, loops, operators, and arrays.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 5. Footer -->
+    <footer class="border-t border-slate-200 bg-white py-6 mt-10">
+        <div class="max-w-4xl mx-auto px-4 text-center text-xs sm:text-sm text-slate-500 font-medium">
+            JavaScript Practice • Beginner Friendly
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Copy Code Functionality
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', async () => {
+                const codeBlock = button.closest('article').querySelector('pre code');
+                if (!codeBlock) return;
+
+                const codeText = codeBlock.innerText;
+
+                try {
+                    await navigator.clipboard.writeText(codeText);
+
+                    const originalHTML = button.innerHTML;
+                    button.innerHTML = `
+                        <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-emerald-400 font-medium">Copied!</span>
+                    `;
+
+                    setTimeout(() => {
+                        button.innerHTML = originalHTML;
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy: ', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
