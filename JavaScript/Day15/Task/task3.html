@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Toggle</title>
+    <style>
+        .card {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 200px;
+}
+
+#details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#details.show {
+    opacity: 1;
+    max-height: 150px;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <img src="assets/images/google.jpg" alt="Google">
+
+        <h2>Google</h2>
+
+        <p id="details">Google is a technology company that provides search,cloud services, software, and many other products.</p>
+
+        <button id="btn">Show Details</button>
+
+    </div>
+
+    <script src="assets/js/task3.js"></script>
+
+</body>
+</html>
