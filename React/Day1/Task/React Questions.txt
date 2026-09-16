@@ -1,0 +1,69 @@
+1.What is React?
+React (also known as React.js or ReactJS) is a free, open-source front-end JavaScript library used to build interactive user interfaces (UIs) for web and mobile applications. Maintained by Meta (formerly Facebook) and a massive global community, it is one of the most widely used web technologies in modern software development. Instead of building a website page-by-page, React allows developers to break a user interface down into modular, reusable building blocks .
+Core Concepts:
+Component-Based Architecture
+Declarative Programming
+The Virtual DOM
+Key Technical Features:
+JSX (JavaScript XML)
+Unidirectional Data Flow
+React Native
+
+2.Is React a library or framework?
+React is a JavaScript library, not a framework. More specifically, it is an open-source library explicitly designed for building user interfaces. The primary difference between a library and a framework comes down to a concept called Inversion of Control. In a library (like React): You are in control. You decide when to call React functions, how to structure your files, and what additional tools to use for routing, styling, or state management. React only handles the "view layer" (rendering the UI) of your application. In a framework (like Angular or Vue): The framework is in control. It provides a strict template, architecture, and set of rules you must follow. It calls your code when it needs it.
+
+3.What is a component? in React
+In React, a component is an independent, reusable building block of the user interface (UI). Conceptually, they act like standard JavaScript functions: they accept inputs (called props) and return React elements (usually written in JSX) that describe exactly what should appear on the screen. Instead of putting all your HTML and logic into one massive file, React allows you to split your UI into small, isolated slices of code. For example, a single page might consist of a Navbar component, a Sidebar component, and a Button component nested inside each other. 
+Core Concepts of a Component:
+Reusability
+Props (Properties)
+State
+Types of Components:
+1. Functional Components (Recommended)
+2. Class Components (Legacy)
+
+4.Why are components important? in React
+In React, components are the essential building blocks of the user interface (UI). Instead of building a website as one massive, interconnected file, React uses a component-based architecture that lets you break the UI down into independent, isolated, and reusable pieces of code.
+Components are critically important in React for several key reasons:
+1. Reusability
+2. Maintainability and Readability
+3. Dynamic Customization (Props)
+4. Independent State Management
+5. Efficient UI Updates (The Virtual DOM)
+
+5.What is JSX? in React
+JSX stands for JavaScript XML. It is a syntax extension for JavaScript used heavily in React that allows you to write HTML-like markup directly inside a JavaScript file. Instead of artificially separating your logic (JavaScript) from your design (HTML), React uses JSX to combine them into reusable visual building blocks called components.
+Key Rules of JSX:
+Return a Single Root Element
+Close All Tags
+Use camelCase for Attributes
+Embed Dynamic JavaScript Expressions
+
+6.What is Virtual DOM?
+The Virtual DOM (VDOM) in React is a programming concept where a lightweight, in-memory representation of the real browser DOM is kept in JavaScript memory. Instead of interacting directly with the browser's actual DOM—which is a slow and computationally expensive operation—React updates this virtual copy first.This architecture allows React to handle UI changes efficiently through a process called reconciliation.
+How the Virtual DOM Works (Step-by-Step):
+The Render Phase (Reconciliation)
+The Commit Phase
+
+7.What is the Real DOM?
+The Real DOM (Document Object Model) is the live, in-memory tree structure created by a web browser that represents every element of an HTML or XML document.
+How It Works:
+Tree Structure
+Live Connection
+Direct Rendering
+Key Characteristics:
+Costly Updates
+Immediate Feedback
+Foundation for Abstractions
+
+8.What is reconciliation?
+Reconciliation is the process React uses to efficiently update the real DOM by comparing a new Virtual DOM tree with the previous one. Instead of tearing down and rebuilding the entire web page every time something changes, React uses a "diffing" algorithm to figure out exactly which parts of the user interface need to change. This keeps your application fast, smooth, and performant.
+How It Works: Step-by-Step:
+sq	The reconciliation process happens seamlessly behind the scenes in two main phases:
+The Render Phase
+The Diffing Process
+The Commit Phase
+The 3 Core Rules of the Diffing Algorithm:
+Different Element Types = Total Rebuild
+Same DOM Element Type = Attribute Update
+Same Component Type = State Preservation
