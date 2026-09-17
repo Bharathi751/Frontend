@@ -8,13 +8,14 @@
 }
 
 .card{
-width: 300px;
+width: 200px;
   padding: 25px;
   margin: 30px auto;
   text-align: center;
   border: 1px solid #ddd;
   border-radius: 15px;
   background: rgb(0, 0, 0);
+  color: aliceblue;
 }
 
 .btn1{
@@ -22,6 +23,6 @@ padding: 10px 25px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background: black;
-  color: white;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
