@@ -1,0 +1,43 @@
+
+.p-card {
+  width: 280px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.p-image {
+  width: 100;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.p-name {
+  color: #1f2937;
+  font-size: 22px;
+  margin: 15px 0 8px;
+}
+
+.p-price {
+  color: #16a34a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.p-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.p-btn:hover {
+  background-color: #1d4ed8;
+}

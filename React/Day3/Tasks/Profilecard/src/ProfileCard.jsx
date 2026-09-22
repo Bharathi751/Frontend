@@ -1,22 +1,16 @@
-import profileImage from "../assets/profile.jpg";
-
+import "./Profilecard.css"
+import Pimg from "./assets/profile.png"
 const ProfileCard = () => {
   return (
-    <div className="profile-card">
-      <img
-        src={profileImage}
-        alt="Profile"
-        className="profile-image"
-      />
+   <>
+   <div className="p-card">
+   <img className="p-image" src={Pimg} alt="Profile" />
+   <h2 className="p-name">Bharathi</h2>
+   <p className="p-role">Frontend Developer</p>
+   <button className="p-btn">View Profile</button>
+   </div>
+   </>
+  )
+}
 
-      <h2>Bharathi</h2>
-      <p>Frontend Developer</p>
-
-      <button className="profile-button">
-        View Profile
-      </button>
-    </div>
-  );
-};
-
-export default ProfileCard;
+export default ProfileCard

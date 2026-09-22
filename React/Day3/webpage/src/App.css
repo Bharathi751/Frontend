@@ -1,0 +1,27 @@
+/* 
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: goldenrod;
+  padding: 15px;
+}
+
+.imgs{
+ width: 100px;
+ border-radius: 30px;
+}
+
+.link{
+  display: flex;
+  gap: 20px;
+}
+
+.banner{
+  padding: 20px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+} */
