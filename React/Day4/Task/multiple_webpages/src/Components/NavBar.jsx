@@ -2,14 +2,16 @@ import { NavLink } from "react-router-dom"
 
 
 const NavBar = () => {
-  return (
+
+
+  return (  
     <>
-    <nav>
-        <div> 
-            <h2>Multiple Webpages</h2>
+    <nav className="">
+        <div className="bg-black text-white p-2 flex justify-around items-center"> 
+            <h2 className="mx-5 bg-white  p-2 text-center text-black w-30 rounded-2xl">Multiple Webpages</h2>
 
 
-            <div>
+            <div className="flex gap-10 mx-5">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/courses">Courses</NavLink>
