@@ -1,3 +1,5 @@
+/* 
+
 import { useState } from "react"
 
 
@@ -54,6 +56,133 @@ setUserAge(e.target.value)
         </tbody>
       </table>
      </div>
+    </>
+  )
+}
+
+export default App
+ */
+
+
+
+
+
+
+
+
+
+
+/* 
+import { useState } from "react"
+
+
+const App = ()=>{
+
+  const [userName,setUserName] = useState("")
+
+  const [showData,setShowData] = useState("")
+
+  const handleChange = (e)=>{
+
+    setUserName(e.target.value)
+  }
+
+  const handleClick = ()=>{
+
+    const evenValues
+
+    setShowData()
+  }
+
+return(<>
+
+<div>
+
+  
+  <input type="text" onChange={handleChange} /> 
+
+  <button onClick={handleClick}>Submit</button>
+
+  <p>{showData%2===0?"Even":"Odd"}</p>
+</div>
+
+</>)
+
+}
+
+export default App
+
+ */
+
+
+import { useState } from "react";
+
+const App = () => {
+
+  const [username,setUserName] = useState("")
+  const [userage,setUserAge] = useState("")
+  const [showData,setShowData] = useState([])
+
+
+
+const handleChange =(e)=>{
+
+setUserName(e.target.value)
+
+
+}
+
+const handleAge =(e)=>{
+setUserAge(e.target.value)
+
+}
+
+const handleClick = ()=>{
+
+  const obj = {id:Date.now(), username:username,userage:userage}
+
+  const copy =[...showData]
+         
+  copy.push(obj)
+
+  setShowData(copy)
+
+  setUserName("")
+  setUserAge("")
+
+  alert("Sucessfully save")
+
+}
+
+  return (
+    <>
+    <div>
+      <input type="text"  onChange={handleChange} value={username} placeholder="enter the name"/>
+      <input type="number"  onChange={handleAge} value={userage} placeholder="enter the number"/>
+      <button onClick={handleClick}>Click</button>
+      <p>{showData.username}</p>
+      <p>{showData.userage}</p>
+
+      <table border={"2"} cellPadding={"10"} cellSpacing={"9"} >
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>UserName</th>
+            <th>UserAge</th>
+          </tr>
+        </thead>
+        <tbody>
+          {showData.map((e)=>(
+            <tr key={e.id}>
+              <td>{e.id}</td>
+              <td>{e.username}</td>
+              <td>{e.userage}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+     
+    </div>
     </>
   )
 }
