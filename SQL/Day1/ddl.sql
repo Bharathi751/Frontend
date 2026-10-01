@@ -1,0 +1,1 @@
+-- CREATE,ALTER,RENAME,TRUNCATE,DROP - Database,table,column
